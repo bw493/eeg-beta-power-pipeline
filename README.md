@@ -45,20 +45,22 @@ Raw OpenBCI .txt file
 
 **`eeg_pipeline.py` cannot be run correctly without first producing a well-formed `trials_output.csv` via `eeg_to_trials.py`.** This document specifies all prerequisites for both scripts.
 
+** Note on interface approach**: A prior CruX BCI project (ssvep-bci-openbci) exposes its pipeline through a web-based interface. This project does not follow that pattern. All analysis is executed directly through eeg_pipeline.py from the terminal. No browser or web server is required.
+
+
 ---
 
 ## 2. Repository Structure
 
 ```
 EEG Beta Power Analysis Pipeline/
-├── eeg_pipeline.py            # Stage 2: statistical analysis and visualization
-├── eeg_to_trials.py           # Stage 1: raw EEG to per-trial feature extraction
-├── eeg_trial_data.csv         # Example/legacy trial data (23-trial dataset)
-├── trials_output.csv          # Generated output from eeg_to_trials.py (80 trials)
-├── OpenBCI-RAW-2026-02-23_19-06-24.txt   # Raw OpenBCI recording
-├── BrainFlow-RAW_2026-02-23_19-05-38_0...txt  # Alternative BrainFlow-format recording
-├── neuroflow-eeg-analytics/   # React + Vite frontend dashboard (neuroflow-eeg-analytics)
-├── neuroflow-eeg-analytics.zip
+├── eeg_pipeline.py                          # Stage 2: statistical analysis and visualization
+├── eeg_to_trials.py                         # Stage 1: raw EEG to per-trial feature extraction
+├── eeg_trial_data.csv                       # Example/legacy trial data (23-trial dataset)
+├── OpenBCI-RAW-2026-02-23_19-06-24.txt      # Raw OpenBCI recording (primary input)
+├── BrainFlow-RAW_2026-02-23_19-05-38_0.csv  # Alternative BrainFlow-format recording
+├── neuroflow-eeg-analytics.zip              # Archived React + Vite frontend (not tracked as submodule)
+├── .gitignore                               # Excludes generated files and system artifacts
 └── README.docx
 ```
 
