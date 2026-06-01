@@ -45,7 +45,7 @@ Raw OpenBCI .txt file
 
 **`eeg_pipeline.py` cannot be run correctly without first producing a well-formed `trials_output.csv` via `eeg_to_trials.py`.** This document specifies all prerequisites for both scripts.
 
-Note on interface approach: A prior CruX BCI project (ssvep-bci-openbci) exposes its pipeline through a web-based interface. This project does not follow that pattern. All analysis is executed directly through eeg_pipeline.py from the terminal. No browser or web server is required.
+> **Note on interface approach**: A prior CruX BCI project (ssvep-bci-openbci) exposes its pipeline through a web-based interface. This project does not follow that pattern. All analysis is executed directly through eeg_pipeline.py from the terminal. No browser or web server is required.
 
 
 ---
